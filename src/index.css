@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+
+body {
+  font-family: "Inter", sans-serif;
+  background: url("/hero-imagen.jpg") center/cover no-repeat fixed;
+  color: #1a1a1a;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.09); 
+
+  z-index: -1;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+
+@keyframes pulse-slow {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 1.8s ease-in-out infinite;
+}
