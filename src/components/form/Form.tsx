@@ -29,6 +29,7 @@ export const Form = ({ fetchWeather, loading }: Props) => {
 
     if (Object.values(search).includes("")) {
       toast.error("Por favor, completa todos los campos");
+      return;
     }
 
     fetchWeather(search);
